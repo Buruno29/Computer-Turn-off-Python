@@ -1,0 +1,23 @@
+import os 
+shutdown = input("Do you wish to shutdown your computer ? (yes / no): ")
+if shutdown == 'no':
+    print("User Refused to turn off")
+else:
+    print("Available Time entries:")
+    print("'2' for 2h, '1' for 1h, '30' for 30min , '15' for 15min, '30s' for 30sec, '10s' for 10sec")
+    print("Note: that any other entry you do, will close the program")
+    time = input("Enter with your chosen Delay Time:")
+    if time == '1h':
+       os.system("shutdown /s /t 3600")
+    elif time == '2h':
+       os.system("shutdown /s /t 7200")
+    elif time == '30':
+       os.system("shutdown /s /t 1800")
+    elif time == '15':
+       os.system("shutdown /s /t 900")
+    elif time == '10s':
+       os.system("shutdown /s /t 10")
+    elif time == '30s':
+       os.system("shutdown /s /t 30")
+    else:
+        print("User Selected a timer out of the expected")
